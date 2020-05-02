@@ -16,9 +16,9 @@ Command:
   -Lc:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../support/dsPIC33C/gld \
   -Lc:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../support/dsPIC33E/gld \
   -Lc:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../support/dsPIC33F/gld \
-  build/default/production/src/inputsignal_square1khz.o \
-  build/default/production/src/main_FFTExample.o \
-  build/default/production/src/twiddleFactors.o \
+  build/default/production/inputsignal_square1khz.o \
+  build/default/production/main_FFTExample.o \
+  build/default/production/twiddleFactors.o \
   --defsym=__MPLAB_BUILD=1 \
   -Tp33FJ128GP802.gld.00 \
   --stack=16 \
@@ -49,13 +49,13 @@ Optional library libp33FJ128GP802.a not found
 Archive member included because of file (symbol)
 
 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libdsp-elf.a(vmax.deo)
-                              build/default/production/src/main_FFTExample.o (_VectorMax)
+                              build/default/production/main_FFTExample.o (_VectorMax)
 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libdsp-elf.a(fft.deo)
-                              build/default/production/src/main_FFTExample.o (_FFTComplexIP)
+                              build/default/production/main_FFTExample.o (_FFTComplexIP)
 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libdsp-elf.a(bitrev.deo)
-                              build/default/production/src/main_FFTExample.o (_BitReverseComplex)
+                              build/default/production/main_FFTExample.o (_BitReverseComplex)
 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libdsp-elf.a(cplxsqrmag.deo)
-                              build/default/production/src/main_FFTExample.o (_SquareMagnitudeCplx)
+                              build/default/production/main_FFTExample.o (_SquareMagnitudeCplx)
 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
                               (__resetPRI)
 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
@@ -83,7 +83,7 @@ section                    address   length (PC units)   length (bytes) (dec)
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
 .nbss                        0x800                   0             0x6  (6)
-_02E41A805eadc515           0x4000                   0           0x400  (1024)
+_02E41A805eaddaa2           0x4000                   0           0x400  (1024)
 
                  Total "data" memory used (bytes):          0x406  (1030) 6%
 
@@ -165,9 +165,9 @@ FUID3            0xf80016           0x000002
 
 Linker script and memory map
 
-LOAD build/default/production/src/inputsignal_square1khz.o
-LOAD build/default/production/src/main_FFTExample.o
-LOAD build/default/production/src/twiddleFactors.o
+LOAD build/default/production/inputsignal_square1khz.o
+LOAD build/default/production/main_FFTExample.o
+LOAD build/default/production/twiddleFactors.o
                     0x0001                  __MPLAB_BUILD = 0x1
 LOAD p33FJ128GP802
 LOAD c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\libfx-elf.a
@@ -272,32 +272,32 @@ __FUID3
 .comment
  *(.comment)
 
-.debug_info       0x000000        0xaac
+.debug_info       0x000000        0xaa0
  *(.debug_info)
- .debug_info      0x000000        0x174 build/default/production/src/inputsignal_square1khz.o
- .debug_info      0x000174        0x7c0 build/default/production/src/main_FFTExample.o
- .debug_info      0x000934        0x178 build/default/production/src/twiddleFactors.o
+ .debug_info      0x000000        0x170 build/default/production/inputsignal_square1khz.o
+ .debug_info      0x000170        0x7bc build/default/production/main_FFTExample.o
+ .debug_info      0x00092c        0x174 build/default/production/twiddleFactors.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0x23b
  *(.debug_abbrev)
- .debug_abbrev    0x000000         0x6b build/default/production/src/inputsignal_square1khz.o
- .debug_abbrev    0x00006b        0x15e build/default/production/src/main_FFTExample.o
- .debug_abbrev    0x0001c9         0x72 build/default/production/src/twiddleFactors.o
+ .debug_abbrev    0x000000         0x6b build/default/production/inputsignal_square1khz.o
+ .debug_abbrev    0x00006b        0x15e build/default/production/main_FFTExample.o
+ .debug_abbrev    0x0001c9         0x72 build/default/production/twiddleFactors.o
 
-.debug_line       0x000000        0x285
+.debug_line       0x000000        0x279
  *(.debug_line)
- .debug_line      0x000000         0x8f build/default/production/src/inputsignal_square1khz.o
- .debug_line      0x00008f        0x16f build/default/production/src/main_FFTExample.o
- .debug_line      0x0001fe         0x87 build/default/production/src/twiddleFactors.o
+ .debug_line      0x000000         0x8b build/default/production/inputsignal_square1khz.o
+ .debug_line      0x00008b        0x16b build/default/production/main_FFTExample.o
+ .debug_line      0x0001f6         0x83 build/default/production/twiddleFactors.o
 
 .debug_frame      0x000000         0x4c
  *(.debug_frame)
- .debug_frame     0x000000         0x4c build/default/production/src/main_FFTExample.o
+ .debug_frame     0x000000         0x4c build/default/production/main_FFTExample.o
 
 .debug_str        0x000000         0x4d
  *(.debug_str)
- .debug_str       0x000000         0x4d build/default/production/src/main_FFTExample.o
+ .debug_str       0x000000         0x4d build/default/production/main_FFTExample.o
 
 .debug_loc
  *(.debug_loc)
@@ -309,11 +309,11 @@ __FUID3
                   0x000000         0x9a
  *(.debug_pubnames)
  .debug_pubnames
-                  0x000000         0x1e build/default/production/src/inputsignal_square1khz.o
+                  0x000000         0x1e build/default/production/inputsignal_square1khz.o
  .debug_pubnames
-                  0x00001e         0x57 build/default/production/src/main_FFTExample.o
+                  0x00001e         0x57 build/default/production/main_FFTExample.o
  .debug_pubnames
-                  0x000075         0x25 build/default/production/src/twiddleFactors.o
+                  0x000075         0x25 build/default/production/twiddleFactors.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -321,7 +321,7 @@ __FUID3
 .debug_aranges    0x000000         0x18
  *(.debug_aranges)
  .debug_aranges
-                  0x000000         0x18 build/default/production/src/main_FFTExample.o
+                  0x000000         0x18 build/default/production/main_FFTExample.o
                     0x0000                  WREG0 = 0x0
                     0x0000                  _WREG0 = 0x0
                     0x0002                  WREG1 = 0x2
@@ -1300,54 +1300,54 @@ LOAD data_init
 .debug_pubtypes
                   0x000018        0x102
  .debug_pubtypes
-                  0x000018         0x32 build/default/production/src/inputsignal_square1khz.o
+                  0x000018         0x32 build/default/production/inputsignal_square1khz.o
  .debug_pubtypes
-                  0x00004a         0x9e build/default/production/src/main_FFTExample.o
+                  0x00004a         0x9e build/default/production/main_FFTExample.o
  .debug_pubtypes
-                  0x0000e8         0x32 build/default/production/src/twiddleFactors.o
+                  0x0000e8         0x32 build/default/production/twiddleFactors.o
 
 __c30_signature
                   0x00011a         0x1e
  __c30_signature
-                  0x00011a          0x6 build/default/production/src/inputsignal_square1khz.o
+                  0x00011a          0x6 build/default/production/inputsignal_square1khz.o
  __c30_signature
-                  0x000120          0x6 build/default/production/src/main_FFTExample.o
+                  0x000120          0x6 build/default/production/main_FFTExample.o
  __c30_signature
-                  0x000126          0x6 build/default/production/src/twiddleFactors.o
+                  0x000126          0x6 build/default/production/twiddleFactors.o
  __c30_signature
                   0x00012c          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
  __c30_signature
                   0x000132          0x6 c:/program files (x86)/microchip/xc16/v1.36/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
 
 .nbss               0x0800          0x6
- .nbss              0x0800          0x6 build/default/production/src/main_FFTExample.o
+ .nbss              0x0800          0x6 build/default/production/main_FFTExample.o
                     0x0800                  _peakFrequencyBin
                     0x0802                  _peakFrequency
 
-_02E41A805eadc515
+_02E41A805eaddaa2
                     0x4000        0x400
- _02E41A805eadc515
-                    0x4000        0x400 build/default/production/src/inputsignal_square1khz.o
+ _02E41A805eaddaa2
+                    0x4000        0x400 build/default/production/inputsignal_square1khz.o
                     0x4000                  _sigCmpx
 
 .config_FWDTEN    0xf8000a          0x2
  .config_FWDTEN
-                  0xf8000a          0x2 build/default/production/src/main_FFTExample.o
+                  0xf8000a          0x2 build/default/production/main_FFTExample.o
 
 .config_FCKSM     0xf80008          0x2
- .config_FCKSM    0xf80008          0x2 build/default/production/src/main_FFTExample.o
+ .config_FCKSM    0xf80008          0x2 build/default/production/main_FFTExample.o
 
 .config_IESO      0xf80006          0x2
- .config_IESO     0xf80006          0x2 build/default/production/src/main_FFTExample.o
+ .config_IESO     0xf80006          0x2 build/default/production/main_FFTExample.o
 
 .const              0x8400        0x200 load address 0x000400  
- .const             0x8400        0x200 build/default/production/src/twiddleFactors.o
+ .const             0x8400        0x200 build/default/production/twiddleFactors.o
                     0x8400                  _twiddleFactors
 
 .dinit            0x000600        0x2ba
  .dinit           0x000600        0x2ba data_init
 
 .text             0x0008ba         0xea
- .text            0x0008ba         0xea build/default/production/src/main_FFTExample.o
+ .text            0x0008ba         0xea build/default/production/main_FFTExample.o
                   0x0008ba                  _main
                   0x000950                  _oscillator_setup
