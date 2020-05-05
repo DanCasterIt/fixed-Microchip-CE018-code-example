@@ -50,16 +50,6 @@
 *
 **********************************************************************/
 //https://www.microchip.com/forums/m163803.aspx
-//#include <p30Fxxxx.h>
-#include <xc.h>
-#include <dsp.h>
-#include "fft.h"
-
-/* Device configuration register macros for building the hex file */
-//_FOSC(CSW_FSCM_OFF & XT_PLL8);          /* XT with 8xPLL oscillator, Failsafe clock off */
-//_FWDT(WDT_OFF);                         /* Watchdog timer disabled */
-//_FBORPOR(PBOR_OFF & MCLR_EN);           /* Brown-out reset disabled, MCLR reset enabled */
-//_FGS(CODE_PROT_OFF);                    /* Code protect disabled */
 
 // DSPIC33FJ128GP802 Configuration Bit Settings
 // FOSCSEL
@@ -72,6 +62,10 @@
 // FWDT
 #pragma config FWDTEN = OFF             // Watchdog Timer Enabled/disabled by user software
 // (LPRC can be disabled by clearing SWDTEN bit in RCON register
+
+#include <xc.h>
+#include <dsp.h>
+#include "fft.h"
 
 void oscillator_setup(void);
 
