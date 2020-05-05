@@ -97,6 +97,9 @@ int main(void)
 
 
 #ifndef FFTTWIDCOEFFS_IN_PROGMEM					/* Generate TwiddleFactor Coefficients */
+    /*TwidFactorInit() works properly ONLY if I write a value into TRISB register or if I call a printf()function*/
+    /*still trying to find out the reason why of this behaviour*/
+    TRISBbits.TRISB2 = 1; // UART's RX as input
 	TwidFactorInit (LOG2_BLOCK_LENGTH, &twiddleFactors[0], 0);	/* We need to do this only once at start-up */
 #endif
 

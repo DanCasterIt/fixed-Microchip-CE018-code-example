@@ -1,0 +1,740 @@
+Disassembly Listing for CE018
+Generated From:
+C:/Users/danie/MPLABXProjects/CE018.X/dist/default/debug/CE018.X.debug.elf
+5-mag-2020 12.52.50
+
+---  E:/DSP Library Deliverables/src/inittwid.c  --------------------------------------------------------
+0003C2  4787F6     ADD W15, #0x16, W15
+0003C4  BE9F88     MOV.D W8, [W15++]
+0003C6  BE9F8A     MOV.D W10, [W15++]
+0003C8  BE9F8C     MOV.D W12, [W15++]
+0003CA  781F8E     MOV W14, [W15++]
+0003CC  9FAFF1     MOV W1, [W15-34]
+0003CE  780482     MOV W2, W9
+0003D0  200018     MOV #0x1, W8
+0003D2  DD4000     SL W8, W0, W0
+0003D4  DE044F     LSR W0, #15, W8
+0003D6  440000     ADD W8, W0, W0
+0003D8  D18400     ASR W0, W8
+0003DA  200000     MOV #0x0, W0
+0003DC  23F801     MOV #0x3F80, W1
+0003DE  07012D     RCALL Float2Fract
+0003E0  97A8FF     MOV [W15-34], W1
+0003E2  780880     MOV W0, [W1]
+0003E4  EB0000     CLR W0
+0003E6  980090     MOV W0, [W1+2]
+000414  97ABFF     MOV [W15-34], W7
+000416  438564     ADD W7, #0x4, W10
+000418  78048C     MOV W12, W9
+00041A  78040D     MOV W13, W8
+0003E8  B94061     MUL.SU W8, #1, W0
+0003EA  0702E7     RCALL ___floatsisf
+0003EC  BE0100     MOV.D W0, W2
+0003EE  20FDB0     MOV #0xFDB, W0
+0003F0  240491     MOV #0x4049, W1
+0003F2  070255     RCALL ___divsf3
+0003F4  780580     MOV W0, W11
+0003F6  780501     MOV W1, W10
+0003F8  78000B     MOV W11, W0
+0003FA  78008A     MOV W10, W1
+0003FC  07024E     RCALL _cosf
+0003FE  9FB7B0     MOV W0, [W15-26]
+000400  9FB7A1     MOV W1, [W15-28]
+00041C  97B5BF     MOV [W15-26], W11
+00041E  97B72F     MOV [W15-28], W14
+000402  E00009     CP0 W9
+000404  320094     BRA Z, .L2
+000406  BE010A     MOV.D W10, W2
+000408  780003     MOV W3, W0
+00040A  780082     MOV W2, W1
+00040C  0703D3     RCALL _sinf
+00040E  BE0600     MOV.D W0, W12
+00052E  BE010A     MOV.D W10, W2
+000410  E98308     DEC2 W8, W6
+000412  330086     BRA N, .L4
+000498  97BB0F     MOV [W15-16], W6
+00049A  E90306     DEC W6, W6
+00049C  330041     BRA N, .L4
+00051A  97BB0F     MOV [W15-16], W6
+00051C  E90306     DEC W6, W6
+00051E  3BFFBF     BRA NN, .L6
+000420  78000B     MOV W11, W0
+000422  78008E     MOV W14, W1
+000424  9FBF86     MOV W6, [W15-16]
+000426  070109     RCALL Float2Fract
+000428  780D00     MOV W0, [W10]
+0004A2  78000B     MOV W11, W0
+0004A4  78008E     MOV W14, W1
+0004A6  9FBF86     MOV W6, [W15-16]
+0004A8  0700C8     RCALL Float2Fract
+0004AA  780D00     MOV W0, [W10]
+00042A  780009     MOV W9, W0
+00042C  780088     MOV W8, W1
+00042E  070105     RCALL Float2Fract
+000430  980510     MOV W0, [W10+2]
+000432  450564     ADD W10, #0x4, W10
+0004AC  780009     MOV W9, W0
+0004AE  780088     MOV W8, W1
+0004B0  0700C4     RCALL Float2Fract
+0004B2  980510     MOV W0, [W10+2]
+0004B4  450564     ADD W10, #0x4, W10
+000434  97B0BF     MOV [W15-26], W1
+000436  97B02F     MOV [W15-28], W0
+000438  780101     MOV W1, W2
+00043A  780180     MOV W0, W3
+00043C  78000B     MOV W11, W0
+00043E  78008E     MOV W14, W1
+000440  07031C     RCALL ___mulsf3
+000442  BE0200     MOV.D W0, W4
+000444  BE010C     MOV.D W12, W2
+000446  9FB7C8     MOV W8, [W15-24]
+000448  780009     MOV W9, W0
+00044A  780088     MOV W8, W1
+00044C  9FB7E4     MOV W4, [W15-20]
+00044E  9FB7F5     MOV W5, [W15-18]
+000450  070314     RCALL ___mulsf3
+000452  BE0100     MOV.D W0, W2
+000454  97B26F     MOV [W15-20], W4
+000456  97B2FF     MOV [W15-18], W5
+000458  BE0004     MOV.D W4, W0
+00045A  0701B9     RCALL ___subsf3
+00045C  9FB790     MOV W0, [W15-30]
+00045E  9FB781     MOV W1, [W15-32]
+0004B6  97B0BF     MOV [W15-26], W1
+0004B8  97B02F     MOV [W15-28], W0
+0004BA  780101     MOV W1, W2
+0004BC  780180     MOV W0, W3
+0004BE  78000B     MOV W11, W0
+0004C0  78008E     MOV W14, W1
+0004C2  0702DB     RCALL ___mulsf3
+0004C4  BE0200     MOV.D W0, W4
+0004C6  BE010C     MOV.D W12, W2
+0004C8  9FB7C8     MOV W8, [W15-24]
+0004CA  780009     MOV W9, W0
+0004CC  780088     MOV W8, W1
+0004CE  9FB7E4     MOV W4, [W15-20]
+0004D0  9FB7F5     MOV W5, [W15-18]
+0004D2  0702D3     RCALL ___mulsf3
+0004D4  BE0100     MOV.D W0, W2
+0004D6  97B26F     MOV [W15-20], W4
+0004D8  97B2FF     MOV [W15-18], W5
+0004DA  BE0004     MOV.D W4, W0
+0004DC  070178     RCALL ___subsf3
+0004DE  9FB790     MOV W0, [W15-30]
+0004E0  9FB781     MOV W1, [W15-32]
+000460  97B0BF     MOV [W15-26], W1
+000462  97B02F     MOV [W15-28], W0
+000464  780101     MOV W1, W2
+000466  780180     MOV W0, W3
+000468  780209     MOV W9, W4
+00046A  780088     MOV W8, W1
+00046C  780404     MOV W4, W8
+00046E  780481     MOV W1, W9
+000470  BE0008     MOV.D W8, W0
+000472  070303     RCALL ___mulsf3
+000474  780480     MOV W0, W9
+000476  780401     MOV W1, W8
+000478  BE010C     MOV.D W12, W2
+00047A  78020B     MOV W11, W4
+00047C  78008E     MOV W14, W1
+00047E  9FB7C4     MOV W4, [W15-24]
+000480  9FB7D1     MOV W1, [W15-22]
+000482  97B04F     MOV [W15-24], W0
+000484  97B0DF     MOV [W15-22], W1
+000486  0702F9     RCALL ___mulsf3
+000488  780209     MOV W9, W4
+00048A  780188     MOV W8, W3
+00048C  780404     MOV W4, W8
+00048E  780483     MOV W3, W9
+000490  BE0108     MOV.D W8, W2
+000492  07019E     RCALL ___addsf3
+000494  780480     MOV W0, W9
+000496  780401     MOV W1, W8
+0004E2  97B0BF     MOV [W15-26], W1
+0004E4  97B02F     MOV [W15-28], W0
+0004E6  780101     MOV W1, W2
+0004E8  780180     MOV W0, W3
+0004EA  780209     MOV W9, W4
+0004EC  780088     MOV W8, W1
+0004EE  780404     MOV W4, W8
+0004F0  780481     MOV W1, W9
+0004F2  BE0008     MOV.D W8, W0
+0004F4  0702C2     RCALL ___mulsf3
+0004F6  780480     MOV W0, W9
+0004F8  780401     MOV W1, W8
+0004FA  BE010C     MOV.D W12, W2
+0004FC  78020B     MOV W11, W4
+0004FE  78008E     MOV W14, W1
+000500  9FB7C4     MOV W4, [W15-24]
+000502  9FB7D1     MOV W1, [W15-22]
+000504  97B04F     MOV [W15-24], W0
+000506  97B0DF     MOV [W15-22], W1
+000508  0702B8     RCALL ___mulsf3
+00050A  780209     MOV W9, W4
+00050C  780188     MOV W8, W3
+00050E  780404     MOV W4, W8
+000510  780483     MOV W3, W9
+000512  BE0108     MOV.D W8, W2
+000514  07015D     RCALL ___addsf3
+000516  780480     MOV W0, W9
+000518  780401     MOV W1, W8
+00049E  97B59F     MOV [W15-30], W11
+0004A0  97B70F     MOV [W15-32], W14
+000520  97A87F     MOV [W15-34], W0
+000522  78074F     MOV [--W15], W14
+000524  BE064F     MOV.D [--W15], W12
+000526  BE054F     MOV.D [--W15], W10
+000528  BE044F     MOV.D [--W15], W8
+00052A  B1016F     SUB #0x16, W15
+00052C  060000     RETURN
+00052E  BE010A     MOV.D W10, W2
+000530  780003     MOV W3, W0
+000532  780082     MOV W2, W1
+000534  07033F     RCALL _sinf
+000536  BE0600     MOV.D W0, W12
+000538  A2F00D     BTG W13, #15
+00053A  37FF6A     BRA .L3
+---  E:/DSP Library Deliverables/src/flt2frct.c  --------------------------------------------------------
+00063A  4787E8     ADD W15, #0x8, W15
+00063C  BE9F88     MOV.D W8, [W15++]
+00063E  BE9F8A     MOV.D W10, [W15++]
+000640  BE9F8C     MOV.D W12, [W15++]
+000642  781F8E     MOV W14, [W15++]
+000644  BE0500     MOV.D W0, W10
+000646  200002     MOV #0x0, W2
+000648  247003     MOV #0x4700, W3
+00064A  070217     RCALL ___mulsf3
+00064C  780480     MOV W0, W9
+00064E  780401     MOV W1, W8
+000650  B81160     MUL.UU W2, #0, W2
+000652  BE000A     MOV.D W10, W0
+000654  07018F     RCALL ___gesf2, ___gtsf2
+000656  E00000     CP0 W0
+000658  350037     BRA LT, .L19, .L23
+00065A  780009     MOV W9, W0
+00065C  780088     MOV W8, W1
+00065E  0701B0     RCALL _floorf
+000660  07018B     RCALL ___fixsfsi
+000662  BE0500     MOV.D W0, W10
+000664  BE000A     MOV.D W10, W0
+000666  0701A9     RCALL ___floatsisf
+000668  BE0600     MOV.D W0, W12
+00066A  200002     MOV #0x0, W2
+00066C  23F003     MOV #0x3F00, W3
+00066E  070205     RCALL ___mulsf3
+000670  780700     MOV W0, W14
+000672  9FBF81     MOV W1, [W15-16]
+000674  780101     MOV W1, W2
+000676  78000E     MOV W14, W0
+000678  780082     MOV W2, W1
+00067A  0701A2     RCALL _floorf
+00067C  9FB7E0     MOV W0, [W15-20]
+00067E  9FB7F1     MOV W1, [W15-18]
+0007A6  97B16F     MOV [W15-20], W2
+0007A8  97B1FF     MOV [W15-18], W3
+0007AA  78028E     MOV W14, W5
+0007AC  97BA0F     MOV [W15-16], W4
+0007AE  780005     MOV W5, W0
+0007B0  780084     MOV W4, W1
+0007B2  07000D     RCALL ___subsf3
+0007B4  BE0100     MOV.D W0, W2
+0007B6  07000C     RCALL ___addsf3
+0007B8  0700DF     RCALL ___fixsfsi
+000680  BE010C     MOV.D W12, W2
+000682  780209     MOV W9, W4
+000684  780088     MOV W8, W1
+000686  780304     MOV W4, W6
+000688  780381     MOV W1, W7
+00068A  BE0006     MOV.D W6, W0
+00068C  0700A0     RCALL ___subsf3
+00068E  BE0400     MOV.D W0, W8
+000690  200002     MOV #0x0, W2
+000692  23F003     MOV #0x3F00, W3
+000694  BE0008     MOV.D W8, W0
+000696  07016E     RCALL ___gesf2, ___gtsf2
+000698  E00000     CP0 W0
+00069A  34007B     BRA LE, .L21
+000792  200002     MOV #0x0, W2
+000794  23F003     MOV #0x3F00, W3
+000796  780088     MOV W8, W1
+000798  780009     MOV W9, W0
+00079A  780201     MOV W1, W4
+00079C  780280     MOV W0, W5
+00079E  BE0004     MOV.D W4, W0
+0007A0  0700E7     RCALL ___ltsf2, ___eqsf2, ___lesf2
+0007A2  E00000     CP0 W0
+0007A4  3AFF81     BRA NZ, .L5
+0007BA  E00000     CP0 W0
+0007BC  32FF75     BRA Z, .L5
+00069C  200002     MOV #0x0, W2
+00069E  23F803     MOV #0x3F80, W3
+0006A0  BE000C     MOV.D W12, W0
+0006A2  070096     RCALL ___addsf3
+0006A4  070169     RCALL ___fixsfsi
+0006A6  BE0500     MOV.D W0, W10
+0006A8  78018A     MOV W10, W3
+0006AA  78010B     MOV W11, W2
+0006AC  780003     MOV W3, W0
+0006AE  780082     MOV W2, W1
+0006B0  27FFF3     MOV #0x7FFF, W3
+0006B2  500F83     SUB W0, W3, [W15]
+0006B4  588FE0     SUBB W1, #0x0, [W15]
+0006B6  340002     BRA LE, .L8
+0006B8  27FFF0     MOV #0x7FFF, W0
+0006BA  200001     MOV #0x0, W1
+0007BE  200002     MOV #0x0, W2
+0006C8  780009     MOV W9, W0
+0006CA  780088     MOV W8, W1
+0006CC  0700DE     RCALL _ceilf
+0006CE  070154     RCALL ___fixsfsi
+0006D0  BE0600     MOV.D W0, W12
+0006D2  BE000C     MOV.D W12, W0
+0006D4  070172     RCALL ___floatsisf
+0006D6  BE0500     MOV.D W0, W10
+0006D8  780109     MOV W9, W2
+0006DA  780188     MOV W8, W3
+0006DC  BE000A     MOV.D W10, W0
+0006DE  070178     RCALL ___nesf2
+0006E0  E00000     CP0 W0
+0006E2  320009     BRA Z, .L9
+0006E4  200002     MOV #0x0, W2
+0006E6  23F803     MOV #0x3F80, W3
+0006E8  BE000A     MOV.D W10, W0
+0006EA  070071     RCALL ___subsf3
+0006EC  070145     RCALL ___fixsfsi
+0006EE  BE0600     MOV.D W0, W12
+0006F0  BE000C     MOV.D W12, W0
+0006F2  070163     RCALL ___floatsisf
+0006F4  BE0500     MOV.D W0, W10
+0006F6  200002     MOV #0x0, W2
+0006F8  23F003     MOV #0x3F00, W3
+0006FA  BE000A     MOV.D W10, W0
+0006FC  0701BE     RCALL ___mulsf3
+0006FE  780700     MOV W0, W14
+000700  9FBF81     MOV W1, [W15-16]
+000702  780101     MOV W1, W2
+000704  78000E     MOV W14, W0
+000706  780082     MOV W2, W1
+000708  07015B     RCALL _floorf
+00070A  9FB7E0     MOV W0, [W15-20]
+00070C  9FB7F1     MOV W1, [W15-18]
+00076C  97B16F     MOV [W15-20], W2
+00076E  97B1FF     MOV [W15-18], W3
+000770  78028E     MOV W14, W5
+000772  97BA0F     MOV [W15-16], W4
+000774  780005     MOV W5, W0
+000776  780084     MOV W4, W1
+000778  07002A     RCALL ___subsf3
+00077A  BE0100     MOV.D W0, W2
+00077C  070029     RCALL ___addsf3
+00077E  0700FC     RCALL ___fixsfsi
+00070E  BE010A     MOV.D W10, W2
+000710  780209     MOV W9, W4
+000712  780088     MOV W8, W1
+000714  780304     MOV W4, W6
+000716  780381     MOV W1, W7
+000718  BE0006     MOV.D W6, W0
+00071A  070059     RCALL ___subsf3
+00071C  BE0400     MOV.D W0, W8
+00071E  200002     MOV #0x0, W2
+000720  23F003     MOV #0x3F00, W3
+000722  BE0008     MOV.D W8, W0
+000724  070127     RCALL ___gesf2, ___gtsf2
+000726  E00000     CP0 W0
+000728  340017     BRA LE, .L22
+000758  200002     MOV #0x0, W2
+00075A  23F003     MOV #0x3F00, W3
+00075C  780088     MOV W8, W1
+00075E  780009     MOV W9, W0
+000760  780201     MOV W1, W4
+000762  780280     MOV W0, W5
+000764  BE0004     MOV.D W4, W0
+000766  070104     RCALL ___ltsf2, ___eqsf2, ___lesf2
+000768  E00000     CP0 W0
+00076A  3AFFE5     BRA NZ, .L12
+000780  E00000     CP0 W0
+000782  32FFD9     BRA Z, .L12
+00072A  200002     MOV #0x0, W2
+00072C  23F803     MOV #0x3F80, W3
+00072E  BE000A     MOV.D W10, W0
+000730  07004F     RCALL ___addsf3
+000732  070122     RCALL ___fixsfsi
+000734  BE0600     MOV.D W0, W12
+000736  78018C     MOV W12, W3
+000738  78010D     MOV W13, W2
+00073A  780003     MOV W3, W0
+00073C  780082     MOV W2, W1
+00073E  280002     MOV #0x8000, W2
+000740  2FFFF3     MOV #0xFFFF, W3
+000742  500F82     SUB W0, W2, [W15]
+000744  588F83     SUBB W1, W3, [W15]
+000746  3DFFBA     BRA GE, .L8
+000748  BE0002     MOV.D W2, W0
+000784  200002     MOV #0x0, W2
+000786  23F803     MOV #0x3F80, W3
+000788  BE000A     MOV.D W10, W0
+00078A  070022     RCALL ___addsf3
+00078C  0700F5     RCALL ___fixsfsi
+00078E  BE0600     MOV.D W0, W12
+000790  37FFD2     BRA .L12
+0006BC  78074F     MOV [--W15], W14
+0006BE  BE064F     MOV.D [--W15], W12
+0006C0  BE054F     MOV.D [--W15], W10
+0006C2  BE044F     MOV.D [--W15], W8
+0006C4  B1008F     SUB #0x8, W15
+0006C6  060000     RETURN
+00074A  78074F     MOV [--W15], W14
+00074C  BE064F     MOV.D [--W15], W12
+00074E  BE054F     MOV.D [--W15], W10
+000750  BE044F     MOV.D [--W15], W8
+000752  B1008F     SUB #0x8, W15
+000754  060000     RETURN
+000756  37FFB8     BRA .L19, .L23
+000758  200002     MOV #0x0, W2
+00075A  23F003     MOV #0x3F00, W3
+00075C  780088     MOV W8, W1
+00075E  780009     MOV W9, W0
+000760  780201     MOV W1, W4
+000762  780280     MOV W0, W5
+000764  BE0004     MOV.D W4, W0
+000766  070104     RCALL ___ltsf2, ___eqsf2, ___lesf2
+000768  E00000     CP0 W0
+00076A  3AFFE5     BRA NZ, .L12
+00076C  97B16F     MOV [W15-20], W2
+00076E  97B1FF     MOV [W15-18], W3
+000770  78028E     MOV W14, W5
+000772  97BA0F     MOV [W15-16], W4
+000774  780005     MOV W5, W0
+000776  780084     MOV W4, W1
+000778  07002A     RCALL ___subsf3
+00077A  BE0100     MOV.D W0, W2
+00077C  070029     RCALL ___addsf3
+00077E  0700FC     RCALL ___fixsfsi
+000780  E00000     CP0 W0
+000782  32FFD9     BRA Z, .L12
+000784  200002     MOV #0x0, W2
+000786  23F803     MOV #0x3F80, W3
+000788  BE000A     MOV.D W10, W0
+00078A  070022     RCALL ___addsf3
+00078C  0700F5     RCALL ___fixsfsi
+00078E  BE0600     MOV.D W0, W12
+000790  37FFD2     BRA .L12
+000792  200002     MOV #0x0, W2
+000794  23F003     MOV #0x3F00, W3
+000796  780088     MOV W8, W1
+000798  780009     MOV W9, W0
+00079A  780201     MOV W1, W4
+00079C  780280     MOV W0, W5
+00079E  BE0004     MOV.D W4, W0
+0007A0  0700E7     RCALL ___ltsf2, ___eqsf2, ___lesf2
+0007A2  E00000     CP0 W0
+0007A4  3AFF81     BRA NZ, .L5
+0007A6  97B16F     MOV [W15-20], W2
+0007A8  97B1FF     MOV [W15-18], W3
+0007AA  78028E     MOV W14, W5
+0007AC  97BA0F     MOV [W15-16], W4
+0007AE  780005     MOV W5, W0
+0007B0  780084     MOV W4, W1
+0007B2  07000D     RCALL ___subsf3
+0007B4  BE0100     MOV.D W0, W2
+0007B6  07000C     RCALL ___addsf3
+0007B8  0700DF     RCALL ___fixsfsi
+0007BA  E00000     CP0 W0
+0007BC  32FF75     BRA Z, .L5
+0007BE  200002     MOV #0x0, W2
+0007C0  23F803     MOV #0x3F80, W3
+0007C2  BE000C     MOV.D W12, W0
+0007C4  070005     RCALL ___addsf3
+0007C6  0700D8     RCALL ___fixsfsi
+0007C8  BE0500     MOV.D W0, W10
+0007CA  37FF6E     BRA .L5
+---  C:/Users/danie/MPLABXProjects/CE018.X/main_FFTExample.c  -------------------------------------------
+1:                 /**********************************************************************
+2:                 * © 2005 Microchip Technology Inc.
+3:                 *
+4:                 * FileName:        main_FFTExample.c
+5:                 * Dependencies:    Header (.h) files if applicable, see below
+6:                 * Processor:       dsPIC30Fxxxx
+7:                 * Compiler:        MPLAB® C30 v3.00 or higher
+8:                 * IDE:             MPLAB® IDE v7.52 or later
+9:                 * Dev. Board Used: dsPICDEM 1.1 Development Board
+10:                * Hardware Dependencies: None
+11:                *
+12:                * SOFTWARE LICENSE AGREEMENT:
+13:                * Microchip Technology Incorporated ("Microchip") retains all ownership and 
+14:                * intellectual property rights in the code accompanying this message and in all 
+15:                * derivatives hereto.  You may use this code, and any derivatives created by 
+16:                * any person or entity by or on your behalf, exclusively with Microchip's
+17:                * proprietary products.  Your acceptance and/or use of this code constitutes 
+18:                * agreement to the terms and conditions of this notice.
+19:                *
+20:                * CODE ACCOMPANYING THIS MESSAGE IS SUPPLIED BY MICROCHIP "AS IS".  NO 
+21:                * WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT NOT LIMITED 
+22:                * TO, IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A 
+23:                * PARTICULAR PURPOSE APPLY TO THIS CODE, ITS INTERACTION WITH MICROCHIP'S 
+24:                * PRODUCTS, COMBINATION WITH ANY OTHER PRODUCTS, OR USE IN ANY APPLICATION. 
+25:                *
+26:                * YOU ACKNOWLEDGE AND AGREE THAT, IN NO EVENT, SHALL MICROCHIP BE LIABLE, WHETHER 
+27:                * IN CONTRACT, WARRANTY, TORT (INCLUDING NEGLIGENCE OR BREACH OF STATUTORY DUTY), 
+28:                * STRICT LIABILITY, INDEMNITY, CONTRIBUTION, OR OTHERWISE, FOR ANY INDIRECT, SPECIAL, 
+29:                * PUNITIVE, EXEMPLARY, INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, FOR COST OR EXPENSE OF 
+30:                * ANY KIND WHATSOEVER RELATED TO THE CODE, HOWSOEVER CAUSED, EVEN IF MICROCHIP HAS BEEN 
+31:                * ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE.  TO THE FULLEST EXTENT 
+32:                * ALLOWABLE BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY RELATED TO 
+33:                * THIS CODE, SHALL NOT EXCEED THE PRICE YOU PAID DIRECTLY TO MICROCHIP SPECIFICALLY TO 
+34:                * HAVE THIS CODE DEVELOPED.
+35:                *
+36:                * You agree that you are solely responsible for testing the code and 
+37:                * determining its suitability.  Microchip has no obligation to modify, test, 
+38:                * certify, or support the code.
+39:                *
+40:                * REVISION HISTORY:
+41:                *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+42:                * Author            Date      Comments on this revision
+43:                *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+44:                * HV               09/30/05  First release of source file
+45:                *
+46:                *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+47:                *
+48:                * ADDITIONAL NOTES:
+49:                *
+50:                *
+51:                **********************************************************************/
+52:                //https://www.microchip.com/forums/m163803.aspx
+53:                
+54:                // DSPIC33FJ128GP802 Configuration Bit Settings
+55:                // FOSCSEL
+56:                #pragma config FNOSC = FRC              // Oscillator Mode (Internal Fast RC (FRC))
+57:                // FOSC
+58:                #pragma config POSCMD = NONE            // Primary Oscillator Source (Primary Oscillator Disabled)
+59:                #pragma config OSCIOFNC = OFF           // OSC2 Pin Function (OSC2 pin has clock out function)
+60:                #pragma config IOL1WAY = ON             // Peripheral Pin Select Configuration (Allow Only One Re-configuration)
+61:                #pragma config FCKSM = CSECMD           // Clock Switching and Monitor (Clock switching is enabled, Fail-Safe Clock Monitor is disabled)
+62:                // FWDT
+63:                #pragma config FWDTEN = OFF             // Watchdog Timer Enabled/disabled by user software
+64:                // (LPRC can be disabled by clearing SWDTEN bit in RCON register
+65:                
+66:                #include "fft.h"
+67:                #include <dsp.h>
+68:                #include <xc.h>
+69:                #include <libpic30.h>
+70:                #include <math.h>
+71:                #include <stdio.h>
+72:                #include <p33FJ128GP802.h>
+73:                #include <stdint.h>
+74:                
+75:                void oscillator_setup(void);
+76:                
+77:                /* Extern definitions */
+78:                extern fractcomplex sigCmpx[FFT_BLOCK_LENGTH] 		/* Typically, the input signal to an FFT  */
+79:                //__attribute__ ((section (".ydata, data, ymemory"), 	/* routine is a complex array containing samp
+80:                __attribute__((space(ymemory),far,aligned(FFT_BLOCK_LENGTH*2*2)));
+81:                
+82:                /* Global Definitions */
+83:                #ifndef FFTTWIDCOEFFS_IN_PROGMEM
+84:                fractcomplex twiddleFactors[FFT_BLOCK_LENGTH/2] __attribute__((space(xmemory), aligned(FFT_BLOCK_LENGTH*2)));
+85:                //fractcomplex twiddleFactors[FFT_BLOCK_LENGTH/2] 	/* Declare Twiddle Factor array in X-space*/
+86:                //__attribute__ ((section (".xbss, bss, xmemory"), aligned (FFT_BLOCK_LENGTH*2)));
+87:                #else
+88:                extern const fractcomplex twiddleFactors[FFT_BLOCK_LENGTH/2]	/* Twiddle Factor array in Program memory */
+89:                __attribute__ ((space(auto_psv), aligned (FFT_BLOCK_LENGTH*2)));
+90:                #endif
+91:                
+92:                int	peakFrequencyBin = 0;				/* Declare post-FFT variables to compute the */
+93:                unsigned long peakFrequency = 0;			/* frequency of the largest spectral component */
+94:                
+95:                int main(void)
+96:                {
+0017F8  FA0006     LNK #0x6
+97:                	int i = 0;
+0017FA  EB0000     CLR W0
+0017FC  780F00     MOV W0, [W14]
+98:                    oscillator_setup();
+0017FE  07004C     RCALL oscillator_setup
+99:                //    TRISBbits.TRISB3 = 0; // TX as output
+100:               //    TRISBbits.TRISB2 = 1; // RX as input
+101:                   printf("ciao");
+001800  294900     MOV #0x9490, W0
+001802  781F80     MOV W0, [W15++]
+001804  07FA92     RCALL __printf_s, __printf_0
+001806  E9878F     DEC2 W15, W15
+102:                   
+103:               	fractional *p_real = &sigCmpx[0].real ;
+001808  240000     MOV #0x4000, W0
+00180A  980710     MOV W0, [W14+2]
+104:               	fractcomplex *p_cmpx = &sigCmpx[0] ;
+00180C  240000     MOV #0x4000, W0
+00180E  980720     MOV W0, [W14+4]
+105:               
+106:               #ifndef FFTTWIDCOEFFS_IN_PROGMEM					/* Generate TwiddleFactor Coefficients */
+107:               	TwidFactorInit (LOG2_BLOCK_LENGTH, &twiddleFactors[0], 0);	/* We need to do this only once at start-up */
+001810  EB0100     CLR W2
+001812  20A001     MOV #0xA00, W1
+001814  200080     MOV #0x8, W0
+001816  07F5D5     RCALL TwidFactorInit
+108:               #endif
+109:               
+110:               	for ( i = 0; i < FFT_BLOCK_LENGTH; i++ )/* The FFT function requires input data */
+001818  EB0000     CLR W0
+00181A  780F00     MOV W0, [W14]
+00181C  370009     BRA .L2
+00182E  E80F1E     INC [W14], [W14]
+001830  200FF0     MOV #0xFF, W0
+001832  78009E     MOV [W14], W1
+001834  508F80     SUB W1, W0, [W15]
+001836  34FFF3     BRA LE, .L3
+111:               	{					/* to be in the fractional fixed-point range [-0.5, +0.5]*/
+112:               		*p_real = *p_real >>1 ;		/* So, we shift all data samples by 1 bit to the right. */
+00181E  90001E     MOV [W14+2], W0
+001820  780010     MOV [W0], W0
+001822  D18080     ASR W0, W1
+001824  90001E     MOV [W14+2], W0
+001826  780801     MOV W1, [W0]
+113:               		*p_real++;			/* Should you desire to optimize this process, perform */
+001828  90001E     MOV [W14+2], W0
+00182A  E88000     INC2 W0, W0
+00182C  980710     MOV W0, [W14+2]
+114:               	}					/* data scaling when first obtaining the time samples */
+115:               						/* Or within the BitReverseComplex function source code */
+116:               
+117:               	p_real = &sigCmpx[(FFT_BLOCK_LENGTH/2)-1].real ;	/* Set up pointers to convert real array */
+001838  241FC0     MOV #0x41FC, W0
+00183A  980710     MOV W0, [W14+2]
+118:               	p_cmpx = &sigCmpx[FFT_BLOCK_LENGTH-1] ; /* to a complex array. The input array initially has all */
+00183C  243FC0     MOV #0x43FC, W0
+00183E  980720     MOV W0, [W14+4]
+119:               						/* the real input samples followed by a series of zeros */
+120:               
+121:               
+122:               	for ( i = FFT_BLOCK_LENGTH; i > 0; i-- ) /* Convert the Real input sample array */
+001840  201000     MOV #0x100, W0
+001842  780F00     MOV W0, [W14]
+001844  37000E     BRA .L4
+001860  E90F1E     DEC [W14], [W14]
+001862  78001E     MOV [W14], W0
+001864  E00000     CP0 W0
+001866  3CFFEF     BRA GT, .L5
+123:               	{					/* to a Complex input sample array  */
+124:               		(*p_cmpx).real = (*p_real--);	/* We will simpy zero out the imaginary  */
+001846  90001E     MOV [W14+2], W0
+001848  780090     MOV [W0], W1
+00184A  90002E     MOV [W14+4], W0
+00184C  780801     MOV W1, [W0]
+00184E  90001E     MOV [W14+2], W0
+001850  E98000     DEC2 W0, W0
+001852  980710     MOV W0, [W14+2]
+125:               		(*p_cmpx--).imag = 0x0000;	/* part of each data sample */
+001854  90002E     MOV [W14+4], W0
+001856  EB0080     CLR W1
+001858  980011     MOV W1, [W0+2]
+00185A  90002E     MOV [W14+4], W0
+00185C  500064     SUB W0, #0x4, W0
+00185E  980720     MOV W0, [W14+4]
+126:               	}
+127:               
+128:               	/* Perform FFT operation */
+129:               #ifndef FFTTWIDCOEFFS_IN_PROGMEM
+130:               	FFTComplexIP (LOG2_BLOCK_LENGTH, &sigCmpx[0], &twiddleFactors[0], COEFFS_IN_DATA);
+001868  2FF003     MOV #0xFF00, W3
+00186A  20A002     MOV #0xA00, W2
+00186C  240001     MOV #0x4000, W1
+00186E  200080     MOV #0x8, W0
+001870  07F672     RCALL _FFTComplexIP
+131:               #else
+132:               	FFTComplexIP (LOG2_BLOCK_LENGTH, &sigCmpx[0], (fractcomplex *) __builtin_psvoffset(&twiddleFactors[0]), (int) __builtin_psvpage(&twiddleFactors[0]));
+133:               #endif
+134:               
+135:               	/* Store output samples in bit-reversed order of their addresses */
+136:               	BitReverseComplex (LOG2_BLOCK_LENGTH, &sigCmpx[0]);
+001872  240001     MOV #0x4000, W1
+001874  200080     MOV #0x8, W0
+001876  07F6AF     RCALL _BitReverseComplex
+137:               
+138:               	/* Compute the square magnitude of the complex FFT output array so we have a Real output vetor */
+139:               	SquareMagnitudeCplx(FFT_BLOCK_LENGTH, &sigCmpx[0], &sigCmpx[0].real);
+001878  240002     MOV #0x4000, W2
+00187A  240001     MOV #0x4000, W1
+00187C  201000     MOV #0x100, W0
+00187E  07F6C6     RCALL _SquareMagnitudeCplx
+140:               
+141:               	/* Find the frequency Bin ( = index into the SigCmpx[] array) that has the largest energy*/
+142:               	/* i.e., the largest spectral component */
+143:               	VectorMax(FFT_BLOCK_LENGTH/2, &sigCmpx[0].real, &peakFrequencyBin);
+001880  208502     MOV #0x850, W2
+001882  240001     MOV #0x4000, W1
+001884  200800     MOV #0x80, W0
+001886  07F65A     RCALL .LFE0, _VectorMax
+144:               
+145:               	/* Compute the frequency (in Hz) of the largest spectral component */
+146:               	peakFrequency = peakFrequencyBin*(SAMPLING_RATE/FFT_BLOCK_LENGTH);
+001888  804281     MOV peakFrequencyBin, W1
+00188A  200270     MOV #0x27, W0
+00188C  B98800     MUL.SS W1, W0, W0
+00188E  780000     MOV W0, W0
+001890  DE80CF     ASR W0, #15, W1
+001892  884290     MOV W0, peakFrequency
+001894  8842A1     MOV W1, 0x854
+147:               
+148:                       while (1);	/* Place a breakpoint here and observe the watch window variables */
+001896  37FFFF     BRA .L6
+149:               }
+150:               
+151:               void oscillator_setup(void) {
+001898  FA0000     LNK #0x0
+152:                   // Configure PLL prescaler, PLL postscaler, PLL divisor
+153:                   PLLFBD = 41; // M = 43
+00189A  200290     MOV #0x29, W0
+00189C  883A30     MOV W0, PLLFBD
+154:                   CLKDIVbits.PLLPOST = 0; // N2 = 2
+00189E  803A21     MOV CLKDIV, W1
+0018A0  2FF3F0     MOV #0xFF3F, W0
+0018A2  608000     AND W1, W0, W0
+0018A4  883A20     MOV W0, CLKDIV
+155:                   CLKDIVbits.PLLPRE = 0; // N1 = 2
+0018A6  803A21     MOV CLKDIV, W1
+0018A8  2FFE00     MOV #0xFFE0, W0
+0018AA  608000     AND W1, W0, W0
+0018AC  883A20     MOV W0, CLKDIV
+156:                   OSCTUN = 0; // Tune FRC oscillator, if FRC is used
+0018AE  EF2748     CLR OSCTUN
+157:                   // Disable Watch Dog Timer
+158:                   RCONbits.SWDTEN = 0;
+0018B0  A9A740     BCLR RCON, #5
+159:                   // Initiate Clock Switch to Internal FRC with PLL (NOSC = 0b001)
+160:                   __builtin_write_OSCCONH(0x01);
+0018B2  200012     MOV #0x1, W2
+0018B4  200780     MOV #0x78, W0
+0018B6  2009A1     MOV #0x9A, W1
+0018B8  207433     MOV #0x743, W3
+0018BA  784980     MOV.B W0, [W3]
+0018BC  784981     MOV.B W1, [W3]
+0018BE  784982     MOV.B W2, [W3]
+161:                   __builtin_write_OSCCONL(0x01);
+0018C0  200012     MOV #0x1, W2
+0018C2  200460     MOV #0x46, W0
+0018C4  200571     MOV #0x57, W1
+0018C6  207423     MOV #0x742, W3
+0018C8  784980     MOV.B W0, [W3]
+0018CA  784981     MOV.B W1, [W3]
+0018CC  784982     MOV.B W2, [W3]
+162:                   // Wait for Clock switch to occur
+163:                   while (OSCCONbits.COSC != 0b001);
+0018CE  000000     NOP
+0018D0  803A11     MOV OSCCON, W1
+0018D2  270000     MOV #0x7000, W0
+0018D4  608080     AND W1, W0, W1
+0018D6  210000     MOV #0x1000, W0
+0018D8  508F80     SUB W1, W0, [W15]
+0018DA  3AFFFA     BRA NZ, .L8
+164:                   // Wait for PLL to lock
+165:                   while (OSCCONbits.LOCK != 1) {
+0018DC  000000     NOP
+0018DE  803A11     MOV OSCCON, W1
+0018E0  200200     MOV #0x20, W0
+0018E2  608000     AND W1, W0, W0
+0018E4  E00000     CP0 W0
+0018E6  32FFFB     BRA Z, .L9
+166:                   };
+167:               }
+0018E8  FA8000     ULNK
+0018EA  060000     RETURN
