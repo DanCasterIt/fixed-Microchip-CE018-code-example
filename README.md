@@ -13,7 +13,10 @@ having FFT_BLOCK_LENGTH	= 256, LOG2_BLOCK_LENGTH = 8
 
 ## How to compile and run
 
-clone this project folder, open it with MPLAB X, if it does not compile already, right-click on the project name -> properties -> Conf:[default] -> XC16-> xc16-ld -> in "Additional options:" put the string: "--library "dsp""
+1) Clone this project
+2) Rename this project's folder from "dfixed-Microchip-CE018-code-example" to "fixed-Microchip-CE018-code-example.X"
+3) Open it with MPLAB X
+4) If it does not compile already, right-click on the project name -> properties -> Conf:[default] -> XC16-> xc16-ld -> in "Additional options:" put the string: "--library "dsp""
 
 ## Workaround for TwidFactorInit() function
 

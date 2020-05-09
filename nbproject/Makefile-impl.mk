@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=CE018.X
+PROJECTNAME=fixed-Microchip-CE018-code-example.X
 
 # Active Configuration
 DEFAULTCONF=default

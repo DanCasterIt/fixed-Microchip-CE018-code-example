@@ -10,9 +10,9 @@ CND_CONF=default
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/CE018.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-OUTPUT_BASENAME=CE018.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-PACKAGE_TOP_DIR=ce018.x/
+OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/fixed-Microchip-CE018-code-example.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+OUTPUT_BASENAME=fixed-Microchip-CE018-code-example.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+PACKAGE_TOP_DIR=fixed-microchip-ce018-code-example.x/
 
 # Functions
 function checkReturnCode
@@ -57,15 +57,15 @@ mkdir -p ${TMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory ${TMPDIR}/ce018.x/bin
+makeDirectory ${TMPDIR}/fixed-microchip-ce018-code-example.x/bin
 copyFileToTmpDir "${OUTPUT_PATH}" "${TMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/package/ce018.x.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/package/fixed-microchip-ce018-code-example.x.tar
 cd ${TMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/ce018.x.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/fixed-microchip-ce018-code-example.x.tar *
 checkReturnCode
 
 # Cleanup
