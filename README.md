@@ -21,3 +21,7 @@ having FFT_BLOCK_LENGTH	= 256, LOG2_BLOCK_LENGTH = 8
 ## Workaround for TwidFactorInit() function
 
 TwidFactorInit() works properly ONLY if I write a value into TRISB register or if I call a printf() function. Still trying to find out the reason why of this behaviour
+
+### If you find this project useful
+
+you may find interesting my signal playback project derived from this one: https://github.com/DanCasterIt/dsPIC_playback_device.git
